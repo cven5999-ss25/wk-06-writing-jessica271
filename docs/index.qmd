@@ -2,12 +2,12 @@
 title: "A minimal example"
 date: today
 author: First Last 
-format:
-  html:
-    toc: true
+format: html
 execute:
   warning: false
 editor: visual
+editor_options: 
+  chunk_output_type: console
 ---
 
 ## Data
@@ -60,4 +60,9 @@ penguins |>
   gt() |> 
   fmt_number(columns = c(mean_bill_depth, sd_bill_depth),
              decimals = 1)
+```
+
+```{r}
+library(usethis)
+use_git_config(user.name = "jessica271", user.email = "Jessica.Maina@colorado.edu")
 ```
